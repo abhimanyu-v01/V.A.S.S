@@ -6,10 +6,13 @@ Sand Simulation using Java
 ## Installation
 
 ```bash
-git clone 
+git clone https://github.com/abhimanyu-v01/V.A.S.S.git
 ```
 
 ### Usage
+
+Install the appropriate JDK and JavaFx versions. 
+Then add the JavaFx Lib path under the variable name "JAVAFX_SDK".
 
 Compile it with:
 

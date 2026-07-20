@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 public class Window extends Application {
 
     public static GameLoop loop;
-    public static int width = 800;
-    public static int height = 600;
-    public static String title = "Sand Sim";
+    public static int width = 1600;
+    public static int height = 900;
+    public static String title = "V.A.S.S";
 
     @Override
     public void start(Stage stage) {

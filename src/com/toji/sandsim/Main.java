@@ -17,13 +17,13 @@ public class Main {
             @Override
             public void update(double dt) {
                 x += speed * dt;
-                if (x > 600 || x < 0) speed = -speed;
+                if (x > 900 || x < 0) speed = -speed;
             }
 
             @Override
             public void render(GraphicsContext gc) {
                 gc.setFill(Color.BLACK);
-                gc.fillRect(0, 0, 800, 600);
+                gc.fillRect(0, 0, 1600, 900);
 
                 gc.setFill(Color.ORANGE);
                 gc.fillRect(400, x, 40, 40);
