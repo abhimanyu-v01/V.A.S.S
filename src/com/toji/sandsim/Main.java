@@ -11,13 +11,16 @@ public class Main {
 
         // This isn't your sim yet, just proof the pipeline (window -> loop -> draw) works.
         GameLoop testLoop = new GameLoop() {
-            double x = 0;
-            double speed = 200; // pixels per second
+            double x = 0, y = 0;
+            double xspeed = 100, yspeed = 100; // pixels per second
+            double square_size = 40;
 
             @Override
             public void update(double dt) {
-                x += speed * dt;
-                if (x > 900 || x < 0) speed = -speed;
+                x += xspeed * dt;
+                y += yspeed * dt;
+                if (x > Window.height - square_size || x < 0) xspeed = -xspeed;
+                if (y > Window.width - square_size || y < 0) yspeed = -yspeed;
             }
 
             @Override
@@ -26,7 +29,7 @@ public class Main {
                 gc.fillRect(0, 0, 1600, 900);
 
                 gc.setFill(Color.ORANGE);
-                gc.fillRect(400, x, 40, 40);
+                gc.fillRect(y, x, square_size, square_size);
             }
         };
 
